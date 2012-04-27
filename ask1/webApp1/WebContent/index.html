@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/form.css" />
+<title>Hotels</title>
+</head>
+<body>
+	<h2>Hotel Bookings</h2><br>
+	<form method="post" action="home.jsp">
+		<div>
+			<h3>Enter your info:</h3>
+		</div>
+		<div>
+        	<label>Name:</label> 
+        	<input type="text" name="name">
+        </div>
+		<div>
+        	<label>Surname:</label> 
+        	<input type="text" name="surname">
+        </div>
+        <div>
+        	<label>Phone:</label> 
+        	<input type="text" name="phone">
+        </div>
+        <div>
+        	<label>E-mail:</label> 
+        	<input type="text" name="email">
+        </div>
+		<div>
+			<label>I am of legal age (18+)</label>
+			<input type="checkbox" name="check"> <br><br>
+		</div>
+		<div>
+			<h3>Select your destination:</h3>
+		</div>
+		<div class="label_radio">
+			<input type="radio" name="local" value="Greece" checked>Local
+			<input type="radio" name="local" value="International">International<br>
+		</div>
+		<div class="actions">
+			<input type="submit" value="Submit">
+			<input type="reset" value="Reset" onclick="return confirm('Are you sure you wish to reset?')">
+		</div>
+	</form>
+
+</body>
+</html>
