@@ -4,11 +4,13 @@
 	<xsl:template match="/">
 		<html>
 			<head>
+			     <link rel="stylesheet" href="css/table.css" />
 				<title>List of <xsl:value-of select="name(*/*)" />s</title>
 			</head>
 			<body background="Money.jpg">
-				<h1 style="background-color: green; color: #FFFFFF; font-size: 20pt; text-align: center; letter-spacing: 1.0em">List of <xsl:value-of select="name(*/*)" />s</h1>
+				<h1 style="font-size: 20pt; text-align: center; letter-spacing: 1.0em">List of <xsl:value-of select="name(*/*)" />s</h1>
 				<table align="center" border="2">
+				<thead>
 					<tr bgcolor="#446600">
 						<th>
 							<xsl:value-of select="name(*/*/@*)" />
@@ -29,7 +31,10 @@
 							<xsl:value-of select="name(*/*/*[3])" />
 						</th>
 					</tr>
+				</thead>
+				<tbody>
 					<xsl:apply-templates />
+				</tbody>
 				</table>
 			</body>
 		</html>
