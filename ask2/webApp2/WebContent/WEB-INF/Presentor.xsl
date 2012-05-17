@@ -41,7 +41,7 @@
 					</tbody>
 				</table>
 				<form method="post" action="index.html">
-						<input type="submit" value="Go back"/>
+						<input type="submit" value="Back"/>
 				</form>
 			</body>
 		</html>

@@ -12,9 +12,14 @@
         <version>12</version>
         <RetailPrice>$35</RetailPrice>
     </book>
-    <book title="Aksion Esti" writer="Elytis" publisher="Psyxogios">
+    <book title="Aksion Esti" writer="Odysseas Elytis" publisher="Psyxogios">
         <pages>490</pages>
         <version>47</version>
         <RetailPrice>$20</RetailPrice>
+    </book>
+    <book title="Le petit prince" writer="Antoine de Saint-Exupéry" publisher="Gallimard">
+        <pages>390</pages>
+        <version>27</version>
+        <RetailPrice>$40</RetailPrice>
     </book>
 </books>

@@ -59,11 +59,32 @@ form input[type=submit]:hover {
     background-image: linear-gradient(top, #4d90fe, #357ae8);
     border: 1px solid #2f5bb7;
 }
-
-form input[type=reset]:hover {
+form input[value=Back] {
+    margin: 6px auto;
+    display: block;
+    width: 150px;
+    padding: 5px;
+    background-color: #4d90fe;
+    color: #333;
+    border: 1px solid #999;
+    border-bottom-color: #888;
     background-image: -webkit-linear-gradient(top, #fff, #d0d0d0);
     background-image: -moz-linear-gradient(top, #fff, #d0d0d0);
     background-image: linear-gradient(top, #fff, #d0d0d0);
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 70%;
+    text-shadow: 1px 1px 1px #2f5bb7;
+    float: left;
+}
+
+form input[value=Back]:hover {
+
+    background-image: -webkit-linear-gradient(top, #fff, #ddd);
+    background-image: -moz-linear-gradient(top, #fff, #ddd);
+    background-image: linear-gradient(top, #fff, #ddd);
+    border: 1px solid #2f5bb7;
 }
 
 form .label_radio input[type=radio]{
