@@ -41,30 +41,19 @@ public class XMLTransformerAskhsh extends HttpServlet {
 		      } catch (Exception e) {	e.printStackTrace(); }
 		System.out.println("Init end");
 	}
-	/*
-	private void changeDomByColor(Document doc, String color) {
-		NodeList nl = doc.getElementsByTagName("h1");
-		Attr a = doc.createAttribute("style");
-		a.setValue("background-color: "+color);
-		nl.item(0).getAttributes().setNamedItem(a);
-	}
-	*/
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("dopost start");
 		System.out.println("Name of document element (at the post) is " + doc.getDocumentElement().getNodeName()); 		
-		//String color = request.getParameter("color");
 		String myXML = request.getParameter("type");
 		System.out.println("You selected the XML file: "  + myXML);
-		//System.out.println(doc.getElementsByTagName("h1").item(0).getAttributes().getNamedItem("style").getNodeValue());		
 		//changeDomByColor(doc, color);
-		//System.out.println(doc.getElementsByTagName("h1").item(0).getAttributes().getNamedItem("style").getNodeValue());		
 		PrintWriter pwr = response.getWriter();
 		try {
 			DOMSource ds = new DOMSource(doc) ; 
 	       		System.out.println( ((Document)ds.getNode()).getDocumentElement().getNodeName() +" " +((Document)ds.getNode()).getDocumentElement().getNodeValue() ) ;
-//			myTransformer = tF.newTransformer(new DOMSource(doc)); 
-//			myTransformer = tF.newTransformer(xsltDoc); 
+			myTransformer = tF.newTransformer(new DOMSource(doc)); 
+			myTransformer = tF.newTransformer(xsltDoc); 
 			myTransformer = tF.newTransformer(ds);
 
 			StreamSource xmlSource = new StreamSource(ctx.getResourceAsStream(myXML));

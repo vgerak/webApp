@@ -4,10 +4,10 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<title>Used <xsl:value-of select="name(*/*)" />s</title>
+				<title>List of <xsl:value-of select="name(*/*)" />s</title>
 			</head>
 			<body background="Money.jpg">
-				<h1 style="background-color: green; color: #FFFFFF; font-size: 20pt; text-align: center; letter-spacing: 1.0em">Used <xsl:value-of select="name(*/*)" />s</h1>
+				<h1 style="background-color: green; color: #FFFFFF; font-size: 20pt; text-align: center; letter-spacing: 1.0em">List of <xsl:value-of select="name(*/*)" />s</h1>
 				<table align="center" border="2">
 					<tr bgcolor="#446600">
 						<th>

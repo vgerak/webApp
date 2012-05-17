@@ -1,17 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCtype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="form.css" />
+	<title>Product Selection</title>
 </head>
 
 <body>
-		<FORM ACTION="http://localhost:8080/webApp2/XMLTransformerAskhsh" METHOD="POST">
-		<STRONG>Please select:<br> </STRONG><PRE>
-        <INPUT TYPE='radio' NAME='type' VALUE="/WEB-INF/Airplanes.xml" CHECKED> Airplanes <BR>
-        <INPUT TYPE='radio' NAME='type' VALUE="/WEB-INF/Books.xml"> Books <BR>
-        <INPUT TYPE='radio' NAME='type' VALUE="/WEB-INF/Cars.xml"> Cars <BR>
-		</PRE><INPUT TYPE='submit' VALUE='OK'>
-	</FORM>
+    <h2>Please select a product:<br> </h2>
+	<form ACTION="http://localhost:8080/webApp2/XMLTransformerAskhsh" method="POST">
+        <div>
+            <input type='radio' name='type' value="/WEB-INF/Airplanes.xml" checked> Airplanes <br>
+        </div>
+        <div>
+            <input type='radio' name='type' value="/WEB-INF/Books.xml"> Books <br>
+        </div>
+        <div>
+            <input type='radio' name='type' value="/WEB-INF/Cars.xml"> Cars <br>
+        </div>
+		<input type='submit' value='OK'>
+	</form>
 </body>
 </html>
