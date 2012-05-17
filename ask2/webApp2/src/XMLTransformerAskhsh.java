@@ -60,7 +60,7 @@ public class XMLTransformerAskhsh extends HttpServlet {
 			System.out.println("Sending back the xml tranformed into html");
 			response.setContentType("text/html"); //in order to put in http body
 			myTransformer.transform(xmlSource, new StreamResult(pwr));
-			pwr.println("The response sent back as a page!");
+			//pwr.println("End of list, thanks for viewing!");
 			pwr.close();
 		}
 		catch (Exception e)

@@ -21,12 +21,9 @@ label {
 }
 form {
     border: 1px solid #ccc;
-    width: 425px;
+    /* width: 425px; */
 }
-form.delete {
-    border: none;
-    width: auto;
-}
+
 form div {
     padding: 5px 0;
     border-bottom: 1px solid #ccc;
