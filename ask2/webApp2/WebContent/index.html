@@ -7,20 +7,48 @@
 </head>
 
 <body>
-	<h2>
-		Please select a product:
-	</h2>
-	<form ACTION="http://localhost:8080/webApp2/XMLTransformerAskhsh" method="POST">
-		<div>
-			<input type='radio' name='type' value="/WEB-INF/Airplanes.xml" checked> Airplanes
-		</div>
-		<div>
-			<input type='radio' name='type' value="/WEB-INF/Books.xml"> Books
-		</div>
-		<div>
-			<input type='radio' name='type' value="/WEB-INF/Cars.xml"> Cars
-		</div>
-		<input type='submit' value='OK'>
-	</form>
+		<form ACTION="http://localhost:8080/webApp2/XMLTransformerAskhsh"
+			method="POST">
+			<div>
+			    <div>
+                    <h2>Please select a product:</h2>
+                </div>
+				<div>
+					<input type='radio' name='type' value="/WEB-INF/Airplanes.xml" checked> Airplanes
+				</div>
+				<div>
+					<input type='radio' name='type' value="/WEB-INF/Books.xml"> Books
+				</div>
+				<div>
+					<input type='radio' name='type' value="/WEB-INF/Cars.xml"> Cars
+				</div>
+                <div><br/></div>
+                <div>
+                    <h2>Please select color of header:</h2>
+                </div>
+                <div>
+                    <input type='radio' name='color' value="red" checked> Red
+                </div>
+                <div>
+                    <input type='radio' name='color' value="green"> Green
+                </div>
+                <div>
+                    <input type='radio' name='color' value="blue"> Blue
+                </div>
+                <div>
+                    <h2>Please select header font:</h2>
+                </div>
+                <div>
+                    <input type='radio' name='font' value="Arial" checked> Arial
+                </div>
+                <div>
+                    <input type='radio' name='font' value="Helvetica"> Helvetica
+                </div>
+                <div>
+                    <input type='radio' name='font' value="Verdana"> Verdana
+                </div>
+			</div>
+				<input type='submit' value='OK'>
+		</form>
 </body>
 </html>

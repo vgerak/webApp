@@ -41,13 +41,30 @@ public class XMLTransformerAskhsh extends HttpServlet {
 		      } catch (Exception e) {	e.printStackTrace(); }
 		System.out.println("Init end");
 	}
+	private void changeDomByColor(Document doc, String color) {
+		NodeList nl = doc.getElementsByTagName("h1"); 
+		Attr a = doc.createAttribute("style"); 
+		a.setValue("background-color: "+color); 
+		nl.item(0).getAttributes().setNamedItem(a);
+	}	
+	private void changeDomByFont(Document doc, String font) {
+		NodeList nl = doc.getElementsByTagName("font"); 
+		Attr a = doc.createAttribute("face"); 
+		a.setValue(""+font); 
+		nl.item(0).getAttributes().setNamedItem(a);
+	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("dopost start");
-		System.out.println("Name of document element (at the post) is " + doc.getDocumentElement().getNodeName()); 		
+		System.out.println("Name of document element (at the post) is " + doc.getDocumentElement().getNodeName());
+		String color = request.getParameter("color");
+		String font = request.getParameter("font");
 		String myXML = request.getParameter("type");
+		System.out.println("You selected the color " + color);
+		System.out.println("You selected the font " + font);
 		System.out.println("You selected the XML file: "  + myXML);
-		//changeDomByColor(doc, color);
+		changeDomByColor(doc, color);
+		changeDomByFont(doc, font);
 		PrintWriter pwr = response.getWriter();
 		try {
 			DOMSource ds = new DOMSource(doc) ; 

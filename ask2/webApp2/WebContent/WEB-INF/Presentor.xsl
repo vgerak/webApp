@@ -11,7 +11,8 @@
 				</title>
 			</head>
 			<body background="Money.jpg">
-				<h1 style="font-size: 20pt; text-align: center; letter-spacing: 1.0em">List of <xsl:value-of select="name(*/*)" />s
+				<h1 style="font-size: 20pt; text-align: center; letter-spacing: 1.0em">
+				    <font>List of <xsl:value-of select="name(*/*)" />s</font>
 				</h1>
 				<table align="center" border="2">
 					<thead>
