@@ -1,0 +1,35 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from VCatalogService WSDL service -->
+
+  <service name="VCatalog" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://server"/>
+      <parameter name="wsdlServiceElement" value="VCatalogService"/>
+      <parameter name="schemaQualified" value="http://xml.apache.org/xml-soap,http://server"/>
+      <parameter name="wsdlServicePort" value="VCatalog"/>
+      <parameter name="className" value="server.VCatalogSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="VCatalog"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="addV" qname="operNS:addV" xmlns:operNS="http://server" soapAction="" >
+        <parameter qname="pns:carModel" xmlns:pns="http://server" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:carMaker" xmlns:pns="http://server" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getMaker" qname="operNS:getMaker" xmlns:operNS="http://server" returnQName="retNS:getMakerReturn" xmlns:retNS="http://server" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:carModel" xmlns:pns="http://server" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="listV" qname="operNS:listV" xmlns:operNS="http://server" returnQName="retNS:listVReturn" xmlns:retNS="http://server" returnType="rtns:Map" xmlns:rtns="http://xml.apache.org/xml-soap" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="getMaker listV addV"/>
+
+  </service>
+</deployment>
